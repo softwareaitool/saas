@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact WorkerFlow | Get in touch</title>
+  <meta name="description" content="Contact WorkerFlow using the form. Includes a map placeholder, support email placeholder, and office hours." />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="canonical" href="https://example.com/contact.html" />
+  <meta property="og:title" content="Contact WorkerFlow | Get in touch" />
+  <meta property="og:description" content="Contact WorkerFlow using the form. Includes a map placeholder, support email placeholder, and office hours." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/hero-placeholder.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0b1020" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar" role="banner">
+    <div class="container">
+      <div class="nav" aria-label="Primary navigation">
+        <a class="brand" href="index.html" aria-label="WorkerFlow home">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__name">WorkerFlow</span>
+        </a>
+
+        <button id="navToggle" class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"/>
+          </svg>
+        </button>
+
+        <nav class="nav__links" role="navigation" aria-label="Site">
+          <a data-nav-link href="index.html">Home</a>
+          <a data-nav-link href="features.html">Features</a>
+          <a data-nav-link href="about.html">About</a>
+          <a data-nav-link href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav__cta" aria-label="Primary call to action">
+          <a class="btn btn--ghost" href="contact.html">Request a demo</a>
+            
+        </div>
+      </div>
+
+      <div id="mobilePanel" class="mobilepanel" aria-label="Mobile menu">
+        <a data-nav-link href="index.html">Home</a>
+        <a data-nav-link href="features.html">Features</a>
+        <a data-nav-link href="about.html">About</a>
+        <a data-nav-link href="contact.html">Contact</a>
+        <div class="mobilepanel__cta">
+          <a class="btn btn--ghost" href="contact.html">Request a demo</a>
+            
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="pagehead">
+      <div class="container">
+        <h1>Contact</h1>
+        <p>
+          Use the form below to send a message. This template does not submit data automatically; it is designed for static hosting.
+          You can connect it to your preferred form handler if you implement one.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Contact content">
+      <div class="container">
+        <div class="split" style="  grid-template-columns: 1fr!important;">
+          <div class="card">
+            <h2>Send a message</h2>
+
+            <form id="contactForm" class="form" aria-label="Contact form">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required />
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <div class="helper">Please avoid including sensitive information.</div>
+              </div>
+
+              <button class="btn btn--primary" type="submit">Submit</button>
+              <div id="formStatus" class="helper" aria-live="polite" style="min-height: 22px;"></div>
+            </form>
+
+            <div class="notice" style="margin-top:16px;">
+              <strong>Office hours:</strong> Mon–Fri, 9:00–17:00 (local time)
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="WorkerFlow home">
+            <span class="brand__mark" aria-hidden="true"></span>
+            <span class="brand__name">WorkerFlow</span>
+          </a>
+          <p class="footer__small" style="margin-top:10px;">
+            WorkerFlow is a generic productivity and workflow website template. Content is informational and intended for demonstration.
+          </p>
+          <p class="footer__small">© <span data-year></span> WorkerFlow. All rights reserved.</p>
+        </div>
+
+        <div>
+          <div class="footer__links" aria-label="Footer links">
+            <a href="features.html">Features</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="terms.html">Terms</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="sitemap.xml">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

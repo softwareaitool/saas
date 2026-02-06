@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WorkerFlow | Simple workflow and task organization</title>
+  <meta name="description" content="WorkerFlow is a modern, neutral SaaS-style website template focused on tasks, collaboration, reporting, dashboards, and automation." />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="canonical" href="https://example.com/index.html" />
+  <meta property="og:title" content="WorkerFlow | Simple workflow and task organization" />
+  <meta property="og:description" content="WorkerFlow is a modern, neutral SaaS-style website template focused on tasks, collaboration, reporting, dashboards, and automation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/hero-placeholder.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#f6f7fb" />
+</head>
+
+<!-- ✅ Scroll locked until user clicks Accept/Reject/Customize -->
+<body class="cookie-locked">
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar" role="banner">
+    <div class="container">
+      <div class="nav" aria-label="Primary navigation">
+        <a class="brand" href="index.html" aria-label="WorkerFlow home">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__name">WorkerFlow</span>
+        </a>
+
+        <button id="navToggle" class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"/>
+          </svg>
+        </button>
+
+        <nav class="nav__links" role="navigation" aria-label="Site">
+          <a data-nav-link href="index.html">Home</a>
+          <a data-nav-link href="features.html">Features</a>
+          <a data-nav-link href="about.html">About</a>
+          <a data-nav-link href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav__cta" aria-label="Primary call to action">
+          <a class="btn btn--ghost" href="contact.html">Request a demo</a>
+        </div>
+      </div>
+
+      <div id="mobilePanel" class="mobilepanel" aria-label="Mobile menu">
+        <a data-nav-link href="index.html">Home</a>
+        <a data-nav-link href="features.html">Features</a>
+        <a data-nav-link href="about.html">About</a>
+        <a data-nav-link href="contact.html">Contact</a>
+        <div class="mobilepanel__cta">
+          <a class="btn btn--ghost" href="contact.html">Request a demo</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <div>
+            <div class="badge" aria-label="Product highlight">
+              <span class="badge__dot" aria-hidden="true"></span>
+              <span>Plan tasks, coordinate teammates, and keep timelines visible in one place</span>
+            </div>
+
+            <h1 style="margin-top:14px;">Keep tasks, updates, and priorities organized with a clear workflow</h1>
+            <p>
+              WorkerFlow helps teams capture work, assign ownership, and track progress using structured views and simple reporting.
+              The content is intentionally neutral and designed to describe common workflow features without overstating outcomes.
+            </p>
+
+            <div class="hero__actions" aria-label="Hero actions">
+              <a class="btn btn--primary" href="#pricing">See plans</a>
+              <a class="btn" href="features.html">Explore features</a>
+            </div>
+          </div>
+
+          <div class="hero__card" aria-label="Dashboard preview">
+            <img src="./assets/images/dashboard.webp" alt="Workflow dashboard preview" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Feature highlights">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Core capabilities</h2>
+            <p>Common workflow modules you can adapt to your real product scope, written in a compliance-friendly style.</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <article class="card card--soft">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm0 4v12h10V7H7zm2 2h6v2H9V9zm0 4h6v2H9v-2z"/></svg>
+            </div>
+            <h3>Task tracking</h3>
+            <p>Create work items with owners, statuses, due dates, and notes so teams can review what’s next and what’s blocked.</p>
+          </article>
+
+          <article class="card card--soft">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm-9 9a9 9 0 0 1 18 0H3z"/></svg>
+            </div>
+            <h3>Collaboration</h3>
+            <p>Centralize updates and context so teams can coordinate decisions, share files, and reduce back-and-forth.</p>
+          </article>
+
+          <article class="card card--soft">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 19V5h2v14H4zm14 0V5h2v14h-2zM8 19V11h2v8H8zm4 0V7h2v12h-2zm4 0V13h2v6h-2z"/></svg>
+            </div>
+            <h3>Reporting</h3>
+            <p>Summarize work using filters and snapshots, such as items by status, by owner, and by time period.</p>
+          </article>
+
+          <article class="card card--soft">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 4h16v6H4V4zm0 10h10v6H4v-6zm12 0h4v6h-4v-6z"/></svg>
+            </div>
+            <h3>Dashboards</h3>
+            <p>Use overview panels and cards to keep priorities visible and track what is in progress across teams.</p>
+          </article>
+
+          <article class="card card--soft">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l2.1 6.5H21l-5.6 4.1L17.5 19 12 14.9 6.5 19l2.1-6.4L3 8.5h6.9L12 2z"/></svg>
+            </div>
+            <h3>Automation</h3>
+            <p>Define rules for routine steps like assigning owners, updating fields, and moving items between stages.</p>
+          </article>
+
+          <article class="card card--soft">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M10 3H3v7h7V3zm11 0h-7v7h7V3zM10 14H3v7h7v-7zm11 0h-7v7h7v-7z"/></svg>
+            </div>
+            <h3>Workflow views</h3>
+            <p>Switch between list and board-style layouts to match how different teams plan, execute, and review work.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="FAQ">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>FAQ</h2>
+            <p>Answers are intentionally general to remain compliant and adaptable.</p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Is this a real service?</summary>
+            <p>This is a static website template. It does not include a backend, account system, or billing by default.</p>
+          </details>
+          <details>
+            <summary>Can I add real product screenshots?</summary>
+            <p>Yes. Replace the images in <code>assets/images/</code> and update image paths in the HTML.</p>
+          </details>
+          <details>
+            <summary>Does the contact form send messages?</summary>
+            <p>The form is client-side only. Connect it to a form handler if you need submissions.</p>
+          </details>
+          <details>
+            <summary>Is the content suitable for ads and compliance?</summary>
+            <p>The copy avoids guarantees, unverified statistics, and third-party brand references. Review final wording against your policies before launch.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="WorkerFlow home">
+            <span class="brand__mark" aria-hidden="true"></span>
+            <span class="brand__name">WorkerFlow</span>
+          </a>
+          <p class="footer__small" style="margin-top:10px;">
+            WorkerFlow is a generic productivity and workflow website template. Content is informational and intended for demonstration.
+          </p>
+          <p class="footer__small">© <span data-year></span> WorkerFlow. All rights reserved.</p>
+        </div>
+
+        <div>
+          <div class="footer__links" aria-label="Footer links">
+            <a href="features.html">Features</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="terms.html">Terms</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="sitemap.xml">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+ <!-- Cookie Consent Strip -->
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent banner">
+    <div class="cookie-container">
+      <div class="cookie-text">
+        <strong>Cookies notice</strong>
+        <p>
+          This site uses essential cookies to operate and optional cookies that may help improve performance and experience.
+          Choose Accept to continue browsing.
+        </p>
+      </div>
+
+      <div class="cookie-actions" role="group" aria-label="Cookie choices">
+        <button type="button" class="btn btn--ghost" data-cookie-choice="reject">Reject</button>
+        <button type="button" class="btn btn--ghost" data-cookie-choice="customize">Customize</button>
+        <button type="button" class="btn btn--primary" data-cookie-choice="accept">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

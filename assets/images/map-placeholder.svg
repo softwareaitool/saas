@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Map placeholder">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#071533"/>
+    </linearGradient>
+    <linearGradient id="p" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4f46e5"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <g opacity="0.55" stroke="rgba(255,255,255,0.16)" stroke-width="2" fill="none">
+    <path d="M130 220 C320 160, 520 260, 710 210 C900 160, 1120 220, 1340 170 C1460 140, 1510 200, 1500 270 C1480 390, 1330 370, 1200 420 C1020 490, 900 560, 700 540 C520 520, 360 620, 210 560 C120 520, 90 430, 120 320 Z"/>
+    <path d="M500 330 C590 300, 650 340, 710 360 C770 380, 860 360, 920 340 C990 315, 1060 360, 1120 380"/>
+    <path d="M330 470 C420 440, 520 470, 600 500 C680 530, 820 540, 900 520 C980 500, 1100 530, 1210 510"/>
+    <path d="M980 250 C1030 230, 1080 250, 1120 280"/>
+  </g>
+  <g>
+    <circle cx="920" cy="470" r="18" fill="url(#p)"/>
+    <circle cx="920" cy="470" r="44" fill="url(#p)" opacity="0.18"/>
+  </g>
+  <text x="100" y="820" fill="rgba(255,255,255,0.45)" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="22">WorkerFlow – map placeholder</text>
+</svg>
