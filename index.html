@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Best Project Management Tool for Teams</title>
+  <meta name="description" content="Compare top project management tools. Discover an all-in-one workspace to manage tasks, docs, dashboards and team collaboration." />
+
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#0f1730;
+      --text:#eef2ff;
+      --muted:#b6c2ff;
+      --line:rgba(255,255,255,.10);
+
+      --primary:#7b68ff;
+      --primary2:#3a86ff;
+      --accent:#2ee59d;
+      --warn:#ffd36b;
+      --danger:#ff6b6b;
+
+      --shadow: 0 18px 45px rgba(0,0,0,.35);
+      --radius:20px;
+      --max:1120px;
+
+      --section-gap:64px;
+      --section-gap-m:40px;
+
+      --uc-grad: linear-gradient(100deg, #40ddff -6.08%, #7612fa 25.08%, #fa12e3);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color:var(--text);
+      line-height:1.5;
+      background: linear-gradient(100deg, #40ddff -6.08%, #7612fa 25.08%, #fa12e3);
+    }
+    a{color:inherit; text-decoration:none}
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:40px 20px 90px;
+    }
+
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:10px 0 18px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:700; letter-spacing:.2px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background:var(--accent);
+      box-shadow:0 0 0 6px rgba(46,229,157,.10);
+    }
+    .pill{
+      border:1px solid var(--line);
+      padding:8px 12px;
+      border-radius:999px;
+      color:var(--muted);
+      font-size:13px;
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      white-space:nowrap;
+    }
+
+    /* HERO 50/50 */
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:24px;
+      align-items:stretch;
+      margin-top:30px;
+    }
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr; gap:20px}
+    }
+
+    .card{
+      background:
+        radial-gradient(1100px 650px at 15% 10%, rgba(123, 104, 255, .22), transparent 60%),
+        radial-gradient(900px 650px at 85% 35%, rgba(58, 134, 255, .18), transparent 60%),
+        radial-gradient(900px 700px at 70% 95%, rgba(46, 229, 157, .10), transparent 55%),
+        var(--bg);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:32px;
+    }
+    @media(max-width:520px){
+      .card{padding:20px}
+    }
+
+    h1{
+      font-size:44px;
+      line-height:1.08;
+      margin:0 0 12px;
+      letter-spacing:-.8px;
+    }
+    @media(max-width:520px){
+      h1{font-size:34px}
+    }
+    .sub{
+      color:var(--muted);
+      font-size:16px;
+      margin:0 0 18px;
+      max-width:60ch;
+    }
+
+    .btnrow{display:flex; gap:12px; flex-wrap:wrap}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:14px;
+      font-weight:700;
+      border:1px solid rgba(255,255,255,.10);
+      cursor:pointer;
+      transition:.18s ease;
+      user-select:none;
+    }
+    .btn.primary{
+      background:linear-gradient(135deg, rgba(123,104,255,1), rgba(58,134,255,1));
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .btn.primary:active{transform:translateY(0px) scale(.99)}
+    .btn.secondary{
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .btn:hover{transform:translateY(-1px); filter:brightness(1.05)}
+
+    .note{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+      margin-top:18px;
+    }
+    @media(max-width:900px){ .grid3{grid-template-columns:1fr} }
+
+    .mini{
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:14px;
+    }
+    .mini b{display:block; margin-bottom:6px}
+    .mini p{margin:0; color:var(--muted); font-size:14px}
+
+    /* ✅ FIXED: Hero image container + proper sizing + caption visible */
+    .heroShot{
+      position:relative;
+      border-radius:var(--radius);
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:var(--shadow);
+      background: rgba(10,15,30,.75);
+      min-height: 420px;
+      display:flex;
+      flex-direction:column;
+    }
+    @media(max-width:900px){
+      .heroShot{min-height:300px}
+    }
+
+    /* image area takes space, caption sits at bottom */
+    .heroShot .imgWrap{
+      position:relative;
+      flex:1;
+      min-height:0;
+    }
+
+    .heroShot img{
+      width:100%;
+      height:100%;
+      object-fit:cover;          /* ✅ no stretching */
+      object-position: top center;/* ✅ shows top nicely; change to 'center' if needed */
+      display:block;
+      transform: scale(1.02);
+      filter:saturate(1.05) contrast(1.02);
+    }
+
+    /* readability overlay */
+    .heroShot .imgWrap::after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(11,16,32,.10), rgba(11,16,32,.55));
+      pointer-events:none;
+    }
+
+    /* caption is ALWAYS visible at bottom */
+    .heroShot .caption{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      justify-content:space-between;
+      padding:14px 16px;
+      border-top:1px solid rgba(255,255,255,.10);
+      background: rgba(11,16,32,.65);
+      backdrop-filter: blur(12px);
+    }
+    .heroShot .capTitle{
+      font-weight:900;
+      letter-spacing:-.2px;
+      font-size:15px;
+      margin:0;
+    }
+    .heroShot .capSub{
+      margin:2px 0 0;
+      color:rgba(238,242,255,.78);
+      font-size:13px;
+      max-width:60ch;
+    }
+    .heroBadge{
+      flex:0 0 auto;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.06);
+      border-radius:999px;
+      padding:8px 10px;
+      font-size:12px;
+      color:rgba(238,242,255,.85);
+      backdrop-filter: blur(10px);
+      white-space:nowrap;
+    }
+
+    /* Sections spacing */
+    .section{ margin-top:var(--section-gap); }
+    @media(max-width:900px){ .section{margin-top:var(--section-gap-m)} }
+    .section h3{
+      margin:0 0 10px;
+      font-size:18px;
+      letter-spacing:-.2px;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      overflow:hidden;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.02);
+    }
+    th,td{
+      padding:12px 12px;
+      border-bottom:1px solid var(--line);
+      text-align:left;
+      font-size:14px;
+    }
+    th{color:var(--text); font-weight:800; background:rgba(255,255,255,.03)}
+    td{color:var(--muted)}
+    tr:last-child td{border-bottom:none}
+    .ok{color:var(--accent); font-weight:800}
+    .mid{color:var(--warn); font-weight:800}
+    .no{color:var(--danger); font-weight:800}
+
+    .usecases{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:10px;
+    }
+    @media(max-width:900px){ .usecases{grid-template-columns:1fr 1fr} }
+    @media(max-width:520px){ .usecases{grid-template-columns:1fr} }
+
+    .usecasesPanel{
+      position:relative;
+      border-radius:26px;
+      padding:28px;
+      overflow:hidden;
+      background:
+        radial-gradient(1100px 650px at 12% 8%, rgba(123,104,255,.18), transparent 62%),
+        radial-gradient(900px 650px at 86% 28%, rgba(58,134,255,.14), transparent 62%),
+        radial-gradient(900px 700px at 70% 95%, rgba(46,229,157,.08), transparent 60%),
+        linear-gradient(180deg, rgba(10,16,38,.88), rgba(6,10,25,.88));
+      box-shadow: 0 26px 70px rgba(0,0,0,.45);
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .usecasesPanel::before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      border-radius:28px;
+      background: linear-gradient(135deg, rgba(64,221,255,.45), rgba(118,18,250,.55), rgba(250,18,227,.45));
+      filter: blur(10px);
+      opacity:.55;
+      z-index:0;
+      pointer-events:none;
+    }
+    .usecasesPanel::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      border-radius:26px;
+      background: rgba(0,0,0,.12);
+      z-index:0;
+      pointer-events:none;
+    }
+    .usecasesPanel > *{ position:relative; z-index:1; }
+
+    .uc{
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:18px;
+      padding:18px;
+      min-height:92px;
+      transition:.18s ease;
+      position:relative;
+      overflow:hidden;
+      background: var(--uc-grad);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.22),
+        0 18px 45px rgba(0,0,0,.25);
+    }
+    .uc::after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(10,15,35,.40), rgba(10,15,35,.62));
+      pointer-events:none;
+    }
+    .uc:hover{
+      transform: translateY(-1px);
+      filter:brightness(1.03);
+      border-color: rgba(255,255,255,.28);
+    }
+    .uc b, .uc span{ position:relative; z-index:1; }
+    .uc b{
+      display:block;
+      margin-bottom:10px;
+      font-size:22px;
+      font-weight:900;
+      letter-spacing:-.2px;
+      text-shadow:0 2px 0 rgba(0,0,0,.35);
+      color:#fff;
+    }
+    .uc span{
+      color:rgba(255,255,255,.92);
+      font-size:14.5px;
+      line-height:1.55;
+      text-shadow:0 2px 0 rgba(0,0,0,.25);
+    }
+
+    .faq{display:grid; gap:10px}
+    details{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      border-radius:16px;
+      padding:14px;
+    }
+    summary{cursor:pointer; font-weight:800; color:var(--text);}
+    details p{margin:10px 0 0; color:var(--muted); font-size:14px}
+
+    .footer{
+      margin-top:16px;
+      color:var(--muted);
+      font-size:12px;
+      opacity:.9;
+    }
+
+    .sticky{
+      position:fixed;
+      left:0; right:0; bottom:0;
+      padding:10px 12px;
+      background:rgba(11,16,32,.78);
+      backdrop-filter: blur(14px);
+      border-top:1px solid var(--line);
+      display:none;
+      z-index:99;
+    }
+    .sticky .inner{
+      max-width:var(--max);
+      margin:0 auto;
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 8px;
+    }
+    .sticky .text{
+      font-size:13px;
+      color:var(--muted);
+    }
+    @media(max-width:900px){ .sticky{display:block} }
+  </style>
+
+  <script type="text/javascript" src="https://inpmz.ttrk.io/track.js?rtkcmpid=6912bfafb8d01bd06f7422b3"></script>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="topbar">
+      <div class="brand">
+        <div class="dot"></div>
+        <div style="font-size: 30px;">ClickUp Pricing & Value</div>
+      </div>
+      <div class="pill" style="background: radial-gradient(1100px 650px at 15% 10%, rgba(123, 104, 255, .22), transparent 60%), radial-gradient(900px 650px at 85% 35%, rgba(58, 134, 255, .18), transparent 60%), radial-gradient(900px 700px at 70% 95%, rgba(46, 229, 157, .10), transparent 55%), var(--bg);">
+        Best work solution • Best price
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="card">
+        <h1>Software That Replaces All Software</h1>
+        <p class="sub">
+          Save money with one workspace for projects, docs, dashboards, chat and AI workflows.
+          Save time because your team works together with perfect context — all in one place.
+        </p>
+
+        <div class="btnrow">
+          <a class="btn primary" id="ctaTop" href="https://inpmz.ttrk.io/click" rel="nofollow noopener" target="_blank">
+            Get started. It’s FREE! →
+          </a>
+          <a class="btn secondary" href="#compare">
+            Compare Features
+          </a>
+        </div>
+
+        <div class="note">
+          Free forever • No credit card • Save up to 30% with yearly
+        </div>
+
+        <div class="grid3">
+          <div class="mini">
+            <b>Save money</b>
+            <p>All apps in one place: projects, docs, chat + 20 more.</p>
+          </div>
+          <div class="mini">
+            <b>Save time</b>
+            <p>All humans working together with perfect context.</p>
+          </div>
+          <div class="mini">
+            <b>Infinite productivity</b>
+            <p>AI agents & workflows that help your team move faster.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ✅ FIXED: Proper image sizing + bottom caption visible -->
+      <div class="heroShot">
+        <div class="imgWrap">
+          <img src="./img/banner.png" alt="Product preview" loading="lazy" />
+        </div>
+
+        <div class="caption">
+          <div>
+            <p class="capTitle">One workspace for tasks, docs, dashboards</p>
+            <p class="capSub">Swap this image with your own UI screenshot to match your funnel.</p>
+          </div>
+          <div class="heroBadge">Live demo preview</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPARE -->
+    <div class="section" id="compare">
+      <div class="card">
+        <h3>Quick comparison (what matters)</h3>
+        <p class="sub" style="margin-top:-2px">
+          Save money, save time, and create infinite productivity with one connected workspace.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Best Alternative</th>
+              <th>Other Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Tasks + Lists</td><td class="ok">✓ Included</td><td class="mid">Often</td></tr>
+            <tr><td>Docs + Notes</td><td class="ok">✓ Included</td><td class="no">✕ Separate app</td></tr>
+            <tr><td>Dashboards</td><td class="ok">✓ Included</td><td class="mid">Limited</td></tr>
+            <tr><td>Automations</td><td class="ok">✓ Included</td><td class="mid">Basic</td></tr>
+            <tr><td>Time Tracking</td><td class="ok">✓ Included</td><td class="mid">Add-on</td></tr>
+            <tr><td>Multiple Views</td><td class="ok">✓ List / Board / Gantt</td><td class="mid">Usually 1–2</td></tr>
+            <tr><td>Team Collaboration</td><td class="ok">✓ Comments + mentions</td><td class="mid">Basic</td></tr>
+          </tbody>
+        </table>
+
+        <div class="btnrow" style="margin-top:14px">
+          <a class="btn primary" id="ctaMid" href="https://inpmz.ttrk.io/click" rel="nofollow noopener" target="_blank">
+            Check Pricing & Plans →
+          </a>
+          <a class="btn secondary" href="#usecases">
+            See Use-Cases
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRICING -->
+    <div class="section" id="pricing">
+      <div class="card">
+        <h3>The best work solution, for the best price.</h3>
+        <p class="sub" style="margin-top:-2px">
+          Start free, upgrade anytime, and save more with yearly plans.
+        </p>
+
+        <div class="usecases" style="grid-template-columns: 1fr 1fr; align-items:stretch;">
+          <div class="uc" style="display:flex; flex-direction:column; gap:10px; background:none;">
+            <div style="display:flex; align-items:center; gap:10px; color:var(--muted); font-size:14px;">
+              <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:7px;background:rgba(46,229,157,.14);border:1px solid rgba(46,229,157,.35);color:var(--accent);font-weight:900;">✓</span>
+              <span><b style="color:var(--text)">100% Money-back Guarantee</b></span>
+            </div>
+            <div style="border:1px solid var(--line); background:rgba(255,255,255,.03); border-radius:18px; padding:18px; flex:1;">
+              <div style="font-size:38px; font-weight:900; letter-spacing:-.6px; margin-bottom:6px; color: #fff621;">Free Forever</div>
+              <div style="color:var(--muted); font-size:14px;">No credit card required. Perfect to start today.</div>
+              <div class="btnrow" style="margin-top:14px">
+                <a class="btn primary" id="ctaPricing" href="https://inpmz.ttrk.io/click" rel="nofollow noopener" target="_blank" style="width:100%">
+                  Get Started →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="uc" style="display:flex; flex-direction:column; gap:10px; background:none;">
+            <b>Why ClickUp is the best all-in-one pick</b>
+            <span>Software that replaces all software — projects, docs, chat, dashboards, AI and more.</span>
+            <div style="display:grid; gap:10px; margin-top:8px;">
+              <div style="display:flex; gap:10px; align-items:flex-start;">
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:7px;background:rgba(46,229,157,.14);border:1px solid rgba(46,229,157,.35);color:var(--accent);font-weight:900;">✓</span>
+                <span style="color:var(--muted)"><b style="color:var(--text)">Save money</b> — All Apps, AI, Projects, Chat + more</span>
+              </div>
+              <div style="display:flex; gap:10px; align-items:flex-start;">
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:7px;background:rgba(46,229,157,.14);border:1px solid rgba(46,229,157,.35);color:var(--accent);font-weight:900;">✓</span>
+                <span style="color:var(--muted)"><b style="color:var(--text)">Save time</b> — One place for perfect context</span>
+              </div>
+              <div style="display:flex; gap:10px; align-items:flex-start;">
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:7px;background:rgba(46,229,157,.14);border:1px solid rgba(46,229,157,.35);color:var(--accent);font-weight:900;">✓</span>
+                <span style="color:var(--muted)"><b style="color:var(--text)">Infinite productivity</b> — AI Agents & Workflows</span>
+              </div>
+              <div style="display:flex; gap:10px; align-items:flex-start;">
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:7px;background:rgba(46,229,157,.14);border:1px solid rgba(46,229,157,.35);color:var(--accent);font-weight:900;">✓</span>
+                <span style="color:var(--muted)"><b style="color:var(--text)">Save up to 30%</b> with yearly (check official page)</span>
+              </div>
+            </div>
+
+            <div class="btnrow" style="margin-top:14px">
+              <a class="btn primary" id="ctaOffers" href="https://inpmz.ttrk.io/click" rel="nofollow noopener" target="_blank" style="width:100%">
+                Get started. Free forever. →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- USE CASES -->
+    <div class="section" id="usecases">
+      <div class="usecasesPanel">
+        <h3 style="margin-bottom:14px">Best for these use-cases</h3>
+
+        <div class="usecases">
+          <div class="uc"><b>Marketing</b><span>Campaign planning, content calendars, approvals</span></div>
+          <div class="uc"><b>Sales</b><span>Pipeline tasks, follow-ups, CRM style workflows</span></div>
+          <div class="uc"><b>Product</b><span>Sprints, roadmaps, bug tracking, releases</span></div>
+          <div class="uc"><b>Agencies</b><span>Client projects, time tracking, deliverables</span></div>
+          <div class="uc"><b>Startups</b><span>One tool for everything, scale without chaos</span></div>
+          <div class="uc"><b>Remote Teams</b><span>Docs, updates and accountability in one place</span></div>
+          <div class="uc"><b>Operations</b><span>Checklists, SOPs, recurring processes</span></div>
+          <div class="uc"><b>Founders</b><span>Goals, priorities, and team execution</span></div>
+        </div>
+
+        <div class="btnrow" style="margin-top:16px">
+          <a class="btn primary" id="ctaUse" href="https://inpmz.ttrk.io/click" rel="nofollow noopener" target="_blank">
+            See Full Features →
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
+      <div class="card">
+        <h3>FAQ (before you choose)</h3>
+        <div class="faq">
+          <details>
+            <summary>Is it beginner friendly?</summary>
+            <p>Yes. Most teams can set up their first workspace in minutes and add tasks instantly.</p>
+          </details>
+          <details>
+            <summary>Can I migrate from Trello, Asana or Notion?</summary>
+            <p>Most modern tools support importing tasks, boards or CSV data to move quickly.</p>
+          </details>
+          <details>
+            <summary>Is there a free plan?</summary>
+            <p>Many all-in-one tools offer a free plan so you can test before upgrading.</p>
+          </details>
+          <details>
+            <summary>Does it work for teams?</summary>
+            <p>Yes. Collaboration features like comments, mentions and dashboards make it ideal for teams.</p>
+          </details>
+        </div>
+
+        <div class="btnrow" style="margin-top:14px">
+          <a class="btn primary" id="ctaBottom" href="https://inpmz.ttrk.io/click" rel="nofollow noopener" target="_blank">
+            Try The Best Pick →
+          </a>
+        </div>
+
+        <div class="footer">
+          Disclosure: This website contains affiliate links, which means we may receive a commission if you click a link and purchase something that we have recommended. While clicking these links won't cost you any extra money, it helps us keep this site up and running. We only promote products or services we genuinely believe will add value to our readers.<br>
+          As an Associate and affiliate for other programs, we earn from qualifying purchases. All affiliate relationships are disclosed in accordance with the Federal Trade Commission’s 16 CFR, Part 255: “Guides Concerning the Use of Endorsements and Testimonials in Advertising.”
+          <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Condition</a></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Sticky CTA (Mobile) -->
+  <div class="sticky">
+    <div class="inner">
+      <div class="text">Compare → then try the best ClickUp alternative.</div>
+      <a class="btn primary" id="ctaSticky" href="https://inpmz.ttrk.io/click" rel="nofollow noopener" target="_blank">
+        Try Now →
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const CLICKUP_URL = "https://inpmz.ttrk.io/click";
+
+    const ctas = [
+      "ctaTop","ctaMid","ctaPricing","ctaOffers","ctaUse","ctaBottom","ctaSticky"
+    ];
+    ctas.forEach(id=>{
+      const el = document.getElementById(id);
+      if(el) el.href = CLICKUP_URL;
+    });
+
+    function trackOutbound(label){
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "outbound_click",
+        outbound_label: label,
+        outbound_url: CLICKUP_URL
+      });
+    }
+
+    ctas.forEach(id=>{
+      const el = document.getElementById(id);
+      if(!el) return;
+      el.addEventListener("click", function(){
+        trackOutbound(id);
+      });
+    });
+  </script>
+</body>
+</html>
