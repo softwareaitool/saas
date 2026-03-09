@@ -403,7 +403,7 @@
     <div class="topbar">
       <div class="brand">
         <div class="dot"></div>
-        <div style="font-size: 30px;">ClickUp Pricing & Value</div>
+        <div style="font-size: 30px;">SaaS Pricing & Value</div>
       </div>
       <div class="pill" style="background: radial-gradient(1100px 650px at 15% 10%, rgba(123, 104, 255, .22), transparent 60%), radial-gradient(900px 650px at 85% 35%, rgba(58, 134, 255, .18), transparent 60%), radial-gradient(900px 700px at 70% 95%, rgba(46, 229, 157, .10), transparent 55%), var(--bg);">
         Best work solution • Best price
@@ -528,7 +528,7 @@
           </div>
 
           <div class="uc" style="display:flex; flex-direction:column; gap:10px; background:none;">
-            <b>Why ClickUp is the best all-in-one pick</b>
+            <b>Why SaaS is the best all-in-one pick</b>
             <span>Software that replaces all software — projects, docs, chat, dashboards, AI and more.</span>
             <div style="display:grid; gap:10px; margin-top:8px;">
               <div style="display:flex; gap:10px; align-items:flex-start;">
@@ -625,7 +625,7 @@
   <!-- Sticky CTA (Mobile) -->
   <div class="sticky">
     <div class="inner">
-      <div class="text">Compare → then try the best ClickUp alternative.</div>
+      <div class="text">Compare → then try the best SaaS alternative.</div>
       <a class="btn primary" id="ctaSticky" href="https://inpmz.ttrk.io/click" rel="nofollow noopener" target="_blank">
         Try Now →
       </a>
@@ -633,14 +633,14 @@
   </div>
 
   <script>
-    const CLICKUP_URL = "https://inpmz.ttrk.io/click";
+    const SaaS_URL = "https://inpmz.ttrk.io/click";
 
     const ctas = [
       "ctaTop","ctaMid","ctaPricing","ctaOffers","ctaUse","ctaBottom","ctaSticky"
     ];
     ctas.forEach(id=>{
       const el = document.getElementById(id);
-      if(el) el.href = CLICKUP_URL;
+      if(el) el.href = SaaS_URL;
     });
 
     function trackOutbound(label){
@@ -648,7 +648,7 @@
       window.dataLayer.push({
         event: "outbound_click",
         outbound_label: label,
-        outbound_url: CLICKUP_URL
+        outbound_url: SaaS_URL
       });
     }
 
